@@ -2,6 +2,17 @@
 
 > A Vue.js project
 
+## branch
+    * master 生产分支  
+    * dev 开发分支  
+    * h5-dls 开发web移动端基于vue开发的模板分支
+
+## 基本说明
+    *本文基于vue开发，应用了vue-router和vuex，也结合了vue文档中filters、directives、plugins、components等一系列开发。*  
+    *应用了vw做适配，因只考虑移动端，故vw通畅，如接入pc，请慎重*  
+    *应用sass预处理器，结合嵌套、mixin、@import、函数式便于开发*  
+    *应用了postcss后处理器，可直接按设计稿px直接写css，postcss会在编译期间转成vw*  
+
 ## Build Setup
 
 ``` bash
@@ -27,4 +38,3 @@ npm run e2e
 npm test
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
