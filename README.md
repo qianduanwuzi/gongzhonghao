@@ -9,6 +9,7 @@
 
 ## 基本说明
     * 本文基于vue开发，应用了vue-router和vuex，也结合了vue文档中filters、directives、plugins、components等一系列开发。*  
+    * 本文基于axios做了封装，方便全局处理* 
     * 应用了vw做适配，因只考虑移动端，故vw通畅，如接入pc，请慎重*  
     * 应用sass预处理器，结合嵌套、mixin、@import、函数式便于开发*  
     * 应用了postcss后处理器，可直接按设计稿px直接写css，postcss会在编译期间转成vw*  
