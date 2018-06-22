@@ -4,6 +4,8 @@ const setBodyStore = {
         timeStamp: 0, 
         type: 'success',
         msg: '',
+        width: '100px',
+        time: 2000,
     },
     //处理异步
     actions: {

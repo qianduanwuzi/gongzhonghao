@@ -1,0 +1,13 @@
+
+@mixin view_layout($width: 1186px) {
+    width: $width;
+    margin: auto;
+}
+
+@mixin set_font($size: 16px, $color: #333333, $weight: Regular) {
+    font: {
+        size: $size;
+        weight: $weight
+    }
+    color: $color;
+}
