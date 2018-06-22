@@ -9,6 +9,7 @@ import api from '@/fetch/api'
 import componentsArray from "@/config/components";
 import * as filters from './filters' 
 import '@/directives'
+import '@/config/uiCom'
 Vue.config.productionTip = false
 window.api = api
 // fix click-delay 300ms
