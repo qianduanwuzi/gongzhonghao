@@ -145,7 +145,7 @@ export default {
     top: 50%;
     right: 10px;
     transform: translateY(-50%);
-    color: #0095f5;
+    color: #ff6600;
   }
   input::-webkit-input-placeholder {
     /* WebKit browsers */

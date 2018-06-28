@@ -99,7 +99,7 @@
   <!--下单填写信息界面-->
   <div v-if='step==2' class="content_box">
     <div class="default-title">
-      <div class="left-option">已选商品<span v-if='card.product.length>1' class="button-reselect" @click='back()'>返回重选</span></div>
+      <div class="left-option"><span>已选商品</span><span v-if='card.product.length>1' class="button-reselect" @click='back()'>返回重选</span></div>
       <div class="right-option">
         <span class="button-redrawer" @click='showBrief()'>{{selectProductBrief()}}</span>
       </div>
@@ -177,7 +177,7 @@
     <self-btn name="我知道了" :styles="{'background-color': '#1AAD19', 'margin-top': '20px'}" widths="80%" @click="clickHandler"></self-btn>
   </div>
   <toast v-model="toastShow" type="text" width="20em" :is-show-mask="showMask" :time="toastTime">{{toastMsg}}</toast>
-  <previewer :list="imageList" ref="previewer" :options="options"></previewer>
+  <!-- <previewer :list="imageList" ref="previewer" :options="options"></previewer> -->
 </div>
 </template>
 
@@ -256,15 +256,15 @@ export default {
     cardHeader() {
       return `${this.card.name}(NO:${this.card.no})`;
     },
-    options: {
-      getThumbBoundsFn(index) {
-        let thumbnail = document.querySelectorAll(".previewer-img")[index];
-        let pageYScroll =
-          window.pageYOffset || document.documentElement.scrollTop;
-        let rect = thumbnail.getBoundingClientRect();
-        return { x: rect.left, y: rect.top + pageYScroll, w: rect.width };
-      }
-    },
+    // options: {
+    //   getThumbBoundsFn(index) {
+    //     let thumbnail = document.querySelectorAll(".previewer-img")[index];
+    //     let pageYScroll =
+    //       window.pageYOffset || document.documentElement.scrollTop;
+    //     let rect = thumbnail.getBoundingClientRect();
+    //     return { x: rect.left, y: rect.top + pageYScroll, w: rect.width };
+    //   }
+    // },
     startDate() {
       //TODO 开始日期
       return "2017-04-10";
@@ -615,7 +615,7 @@ export default {
     color: #fff;
   }
   .content_box {
-    margin-top: 46px;
+    // margin-top: 46px;
   }
   .background {
     background: #ff6600;
@@ -734,8 +734,11 @@ export default {
     font-size: 14px;
     position: relative;
     display: flex;
+    align-items: center;
   }
   .left-option {
+       display: flex;
+    align-items: center;
     float: left;
     margin-bottom: 5px;
   }

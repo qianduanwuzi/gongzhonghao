@@ -1,6 +1,6 @@
 // 注册vux组件
 import Vue from 'vue'
-import { Grid, GridItem, Flexbox, FlexboxItem, Tab, TabItem, Swiper, SwiperItem, XInput, Group, XTable, Scroller, LoadMore, Divider, Popup, Toast, XButton, Datetime, XHeader, ViewBox, Loading, ConfirmPlugin      } from 'vux'
+import { Grid, GridItem, Flexbox, FlexboxItem, Tab, TabItem, Swiper, SwiperItem, XInput, Group, XTable, Scroller, LoadMore, Divider, Popup, Toast, XButton, Datetime, XHeader, ViewBox, Loading, ConfirmPlugin,Confirm     } from 'vux'
 
 Vue.component('grid', Grid)
 Vue.component('grid-item', GridItem)
@@ -23,4 +23,5 @@ Vue.component('datetime', Datetime)
 Vue.component('x-header', XHeader)
 Vue.component('view-box', ViewBox)
 Vue.component('loading', Loading)
+Vue.component('confirm', Confirm)
 Vue.use(ConfirmPlugin)

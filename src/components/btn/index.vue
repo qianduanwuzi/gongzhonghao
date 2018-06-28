@@ -23,7 +23,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .btnBox{
-    background-color: #0095F5;
+    background-color: #ff6600;
     line-height: 45px;
     height: 45px;
     text-align: center;

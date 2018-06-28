@@ -1,14 +1,11 @@
 <template>
     <div class="take_container">
         <self-input widths="90%" :styles="{'height': '45px','font-size':'12px'}" v-model="form.code" placeholder="扫条形码或输入数字" class="ignore" @focus="$emit('focus')" @blur="$emit('blur')" eventName="扫一扫" @clickHandler="scan" ref="code">
-             <img  src="https://skl-h5.oss-cn-hangzhou.aliyuncs.com/phone-icon.png" alt="">
         </self-input>
-        <div class="tip_notake" @click="look" v-show="num">您有{{num}}张蟹券未提货，点击查看</div>
-        <self-input v-if="name == '预约提醒'" widths="90%" :styles="{'height': '45px','font-size':'12px'}" v-model="form.phone" placeholder="请输入手机号" class="ignore" @focus="$emit('focus')" @blur="$emit('blur')" :eventName="eventName" @clickHandler="clickHandler" ref="code">
-             <img  src="https://skl-h5.oss-cn-hangzhou.aliyuncs.com/phone-icon.png" alt="">
+        <div class="tip_notake" @click="$router.push({path: '/ticket'})" v-show="num">您有{{num}}张蟹券未提货，点击查看</div>
+        <self-input  v-if="name == '预约提醒'" widths="90%" :styles="{'height': '45px','font-size':'12px'}" v-model="form.phone" placeholder="请输入手机号" class="ignore" @focus="$emit('focus')" @blur="$emit('blur')" :eventName="eventName" @clickHandler="clickHandler" ref="code">
         </self-input>
          <self-input v-if="name == '预约提醒'" widths="90%" :styles="{'height': '45px','font-size':'12px'}" v-model="form.msCode" placeholder="请输入短信验证码" class="ignore" @focus="$emit('focus')" @blur="$emit('blur')" eventName="">
-            <img  src="https://skl-h5.oss-cn-hangzhou.aliyuncs.com/mes-icon.png" alt="">
         </self-input>
         <self-btn :name="name" class="btn" @click="clickBtn" widths="90%"></self-btn>
         <div class="errMsg">{{errMsg}}</div>
@@ -40,19 +37,17 @@ export default {
   mounted() {
       this.$nextTick(() => {
           console.log(this.$route.query.code)
-           api.get(`api/wx/shop/1?code=${this.$route.query.code}`).then(res => {
+        //    api.get(`api/wx/shop/1?code=${this.$route.query.code}`).then(res => {
 
-           })
+        //    })
         //   code 可拿信息 、 调token令牌
-        if(new Date().getTime() < new Date('2018 10 23').getTime()) this.name = '预约提醒'
+        if(new Date().getTime() < new Date('2018-10-23').getTime()) this.name = '预约提醒'
         else this.name = '提蟹'
       })
       
   },
   methods: {
-      look() {
-
-      },
+     
     clickHandler() {
         let _this = this;
     //   api.post("-1/ajax/smsz", formData).then(res => {
@@ -115,7 +110,7 @@ export default {
         height: 20px;
         margin-top: 10px;
         text-align: center;
-        @include set_font(16px, #0095F5);
+        @include set_font(16px, #ff6600);
     }
   .ignore {
     margin-top: 15px;
