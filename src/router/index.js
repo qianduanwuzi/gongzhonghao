@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import TakeOrOrder from '@/modules/takeOrder' 
 import Ticket from '@/modules/ticket' 
 import Help from '@/modules/help' 
+import Shop from '@/modules/shop'
 import Portal from '@/portal'
 Vue.use(Router)
 
@@ -31,6 +32,12 @@ export default new Router({
           component: Help,
           meta:{requireAuth: true}
         },
+        {
+          name: '_商城', 
+          path: 'shop',
+          component: Shop,
+          meta:{requireAuth: true}
+        }
       ]
     }
   ]

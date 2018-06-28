@@ -1,7 +1,11 @@
 <template>
     <div class="ticker_container">
         <div class="header" ref="header">
-            头像 微信名 手机号 修改
+            <!-- <img src="" alt="" class="wx_img"> -->
+            <div>图片</div>
+            <div class="wx_name">微信名</div>
+            <div class="ex_tel">手机号</div>
+            <div class="edit_txt">修改</div>
         </div>
          <scroller lock-x :height="viewHeight+'px'" @on-scroll-bottom="onScrollBottom" ref="scrollerBottom" :scroll-bottom-offst="viewHeight">
             <div class="list_box">
@@ -117,7 +121,19 @@ export default {
 <style lang="scss" scoped>
 .ticker_container{
     .header{
-
+        width: 90%;
+        margin: auto;
+        display: flex;
+        .wx_name{
+            padding: 0 5px
+        }
+        .ex_tel{
+            padding: 0 5px
+        }
+        .edit_txt{
+            padding: 0 5px;
+            color: #0095F5;
+        }
     }
     .list_box{
         .each{
