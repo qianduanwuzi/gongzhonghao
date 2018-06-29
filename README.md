@@ -2,6 +2,11 @@
 
 > A Vue.js project
 
+# Support
+> ui vux  
+> vue-cli vuex vue-router  
+> axios  
+
 ## Step
 1.注册公众号，分服务号和订阅号，区别还是较大的  
 2.进入开发模式，绑服务器（服务端做自动回复等）、绑定开发者。编辑模式针对中小企业不依赖深度开发（后台直接编辑关键词自动回复，推送等  
