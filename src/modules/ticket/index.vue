@@ -86,6 +86,7 @@ export default {
         return {
             showEdit: false,
             wxInfo: {img:'', name:'__proto__', tel:15150268315},
+            // 模拟数据
             dataList: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,1,1,1,1,1,1,1,11,1,1,1,1,1,1,1,11,],
             viewHeight: 0,
             hasData: true,
@@ -115,36 +116,36 @@ export default {
         compuFloatHeight(el) {
             return el.getBoundingClientRect().bottom - el.getBoundingClientRect().top;
         },
-        onScrollBottom() {
-            if (this.onFetching) {
-                // do nothing
-            } else {
-                this.onFetching = true
-                setTimeout(() => {
-                    this.hasData = true;
-                    // if(this.searchParams.curr_pag >= this.pageMaxNum) {
-                    //     this.hasData = false;
-                    // }else {
-                    //     this.searchParams.curr_pag += 1
-                    //     let list = []
-                    //     api.get("-1/app/recordList", this.searchParams).then(res => {
-                    //         list =  res.result.order_list;
-                    //         if(!list.length) {
-                    //         // 无数据
-                    //             this.hasData = false;
-                    //         } else {
-                    //             this.hasData = true;
-                    //             this.dataList = this.dataList.concat(list)
-                    //             this.$nextTick(() => {
-                    //                 this.$refs.scrollerBottom.reset();
-                    //             });
-                    //         }
-                    //     });
-                    // }
-                    this.onFetching = false;
-                }, 200);
-            }
-        },
+        // onScrollBottom() {
+        //     if (this.onFetching) {
+        //         // do nothing
+        //     } else {
+        //         this.onFetching = true
+        //         setTimeout(() => {
+        //             this.hasData = true;
+        //             // if(this.searchParams.curr_pag >= this.pageMaxNum) {
+        //             //     this.hasData = false;
+        //             // }else {
+        //             //     this.searchParams.curr_pag += 1
+        //             //     let list = []
+        //             //     api.get("-1/app/recordList", this.searchParams).then(res => {
+        //             //         list =  res.result.order_list;
+        //             //         if(!list.length) {
+        //             //         // 无数据
+        //             //             this.hasData = false;
+        //             //         } else {
+        //             //             this.hasData = true;
+        //             //             this.dataList = this.dataList.concat(list)
+        //             //             this.$nextTick(() => {
+        //             //                 this.$refs.scrollerBottom.reset();
+        //             //             });
+        //             //         }
+        //             //     });
+        //             // }
+        //             this.onFetching = false;
+        //         }, 200);
+        //     }
+        // },
     }
 }
 </script>
@@ -155,8 +156,6 @@ export default {
         width: 100%;
         margin: auto;
         padding: 10px 0px;
-        // display: flex;
-        // justify-content: space-around;
         text-align: center;
         border-bottom: 1px solid #E5E5E5;
         .flex_item{
@@ -193,7 +192,6 @@ export default {
             margin: 20px auto;
             border: 1px solid #ddd;
             padding: 15px;
-            // height: 50px;
         }
         .handle_box{
             text-align: right;
