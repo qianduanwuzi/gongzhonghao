@@ -1,6 +1,6 @@
 # xiaochengxu-chushou
 
-> A Vue.js project h5-template分支readme不同（为H5初步开发模板）
+> A Vue.js project h5-dls分支readme不同（为H5初步开发模板）
 
 # Support
 > ui vux  
